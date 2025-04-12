@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import statsmodels.api as sm
 import numpy as np
 import pickle
+import pandas as pd
 
 app = Flask(__name__)
 
