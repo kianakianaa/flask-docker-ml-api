@@ -13,7 +13,7 @@ def predict():
     x = float(request.args.get("x", 0))
     w = float(request.args.get("w", 0))
     new_data = pd.DataFrame({'const': [1], 'w': [w], 'x': [x]})
-    y_pred = model.predict(w, x)
+    y_pred = model.predict(new_data)
     
     # Log prediction
     with open("output.txt", "w") as f:
