@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
 import numpy as np
 import pickle
 
