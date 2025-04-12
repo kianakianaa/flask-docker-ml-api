@@ -1,6 +1,6 @@
 import pandas as pd
 import pickle
-from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
 
 # Load the Excel data
 df = pd.read_excel('training_data.xlsx')
@@ -10,8 +10,7 @@ X = df[['w', 'x']]  # Input features: treatment and covariate
 y = df['y']         # Output: outcome variable
 
 # Train the model
-model = LinearRegression()
-model.fit(X, y)
+model = sm.OLS(y, X).fit()
 
 # Save the trained model
 with open('model.pkl', 'wb') as f:
