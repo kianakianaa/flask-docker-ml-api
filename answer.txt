@@ -1,13 +1,16 @@
-1. A brief (2–3 sentence) explanation of each component in your setup:
+1. Command: 
+    curl --get --data-urlencode "x=20" --data-urlencode "w=1" http://localhost:5000/predict
+
+2. A brief (2–3 sentence) explanation of each component in your setup:
     - app.py: a Python Flask API
     - Dockerfile: to build the app container
     - How containerization improves reproducibility: containerization is about packaging an application along with all its dependencies, configurations, and environment. In this way, the application can run the same way no matter where it is deployed.
 
-2. Q1.2 Report the estimated ATE (τˆ) and its statistical significance
+3. Q1.2 Report the estimated ATE (τˆ) and its statistical significance
     - Estimated ATE: -9.1057
     - Statistical significance: less then 0.001
 
-3. Q1.3 Briefly explain under what assumptions τˆ can be given a causal interpretation
+4. Q1.3 Briefly explain under what assumptions τˆ can be given a causal interpretation
     - No interference between units (e.g. treatment status of one unit does not affect the potential outcomes of another unit)
     - No simultaneity: the causal ordering between Ti and Yi is pre-determined such that Ti affects Yi but not vice versa.
     - Treatment consistency: all individuals receive the same version of the treatment without variation in its implementation.
