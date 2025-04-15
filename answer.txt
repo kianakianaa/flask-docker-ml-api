@@ -15,4 +15,5 @@
     - No simultaneity: the causal ordering between Ti and Yi is pre-determined such that Ti affects Yi but not vice versa.
     - Treatment consistency: all individuals receive the same version of the treatment without variation in its implementation.
 
+5. Test result when x=20 and w=1: 117.15789954894544
   
